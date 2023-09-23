@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.clear{
+  background-color: red;
+}
+
+.add_post button{
+  display: block;
+  width: 100%;
+}
+.post_image{
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+.post_image::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px 15px 0 0;
+}
+
+.post_image .edit,
+.post_image .creator{
+  z-index: 1;
+  color: #fff;
+}
+.main{
+  border-style: solid;
+  padding-left: 40%;
+  background-color: azure;
+  box-shadow: 0 0 10px 1px rgba(red, green, blue, alpha);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
