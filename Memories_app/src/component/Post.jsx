@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios"
+
 const Post = () => {
     const [title, setTitile]= useState("");
     const [creator, setCreator]= useState("");
@@ -21,10 +22,9 @@ const handleSubmit =(event) =>{
         form_message: message,
         form_tag: tag,
         form_creator: creator
-
     }
-    axios.post(" http://localhost:5000/post/create", formdata)
-        .then ((response)=> console .log(response.json()))//output succeessful
+    axios.post(" http://localhost:5001/post/create", formdata)
+        .then ((response)=> console .log(response))//output succeessful
         .catch((error)=>console.log(error))//output unsuccessfull
     }
     return (     <div className="Post">

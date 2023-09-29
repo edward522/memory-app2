@@ -1,9 +1,24 @@
+import { useEffect } from "react";
+import five from "../assets/five.png";
 import four from "../assets/five.png"
+import { useDispatch } from "react-redux";
+import { create_data} from "../features/post/postsSlics";
+import axios from 'axios'
 //loop
 const dummy_array = [1, 2, 3, 4];   
             
         
         const Body = () => {
+            useEffect(()=>{
+                const fetch_data = () => {
+                    axios.get('http://localhost:5001/posts/get_data')
+                        .then((response) => console.log(response))
+                        .catch((error) => console.log(error))
+                }
+
+                fetch_data()
+            },[])
+
           return (
             <div className="Body" style={{
                 display: 'grid',
